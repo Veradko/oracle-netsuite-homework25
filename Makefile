@@ -3,12 +3,12 @@ CLASSNAME = print_numbers
 all: $(CLASSNAME).class
 
 %.class: %.java
-  javac $<
+	javac $<
 
 # run programm
 run: $(CLASSNAME).class
-  java $(CLASSNAME)
+	java $(CLASSNAME)
 
 # remove all .class files
 clean:
-  rm -f *.class
+	rm -f *.class

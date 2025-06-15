@@ -1,4 +1,4 @@
-
+// function that prints either numbers or, if conditions are met, strings
 public class print_numbers {
     public static void main(String[] args) {
         // decleration and initialization of an output string
@@ -13,16 +13,22 @@ public class print_numbers {
             mod2 = i % 2;
             mod5 = i % 5;
 
-            if(mod2 == 0) {
+            // number is divisible by both 2 and 5
+            if(mod2 == 0 && mod5 == 0) {
+                System.out.println(outString[0] + outString[1]);
+            }
+            // number is only divisible by 2 
+            else if(mod2 == 0) {
                 System.out.println(outString[0]);
             }
-            if(mod5 == 0) {
+            // number is only divisible by 5
+            else if(mod5 == 0) {
                 System.out.println(outString[1]);
             }
-            if(mod2 == 1 && mod2 == 1) {
+            // number is neither divisible by 2 nor 5
+            else if(mod2 != 0 && mod5 != 0) {
                 System.out.println(i);
             }
-
         }
     }
 }
